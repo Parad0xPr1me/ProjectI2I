@@ -1,31 +1,44 @@
-     html {
-      scroll-behavior: smooth;
-    }
-     body{
-        font-family: 'Varela', sans-serif;
-        font-size: 18px;
-      }
-      .overview-card, .bank-card, .partners-card{
-        border: none;
-        background-color: transparent;
-      }
-      .card-title{
-        color: #f87832;
-      }
-      nav{
-        z-index: 1;
-      }
-      .slogan{
-        z-index: 1;
-        margin-top: 220px;
-        position: relative;
-        color: #f87832;
-      }
-      .logo{
-        height: 7rem;
-        padding-top: 0;
-      }
-      #video{
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Varela', sans-serif;
+    font-size: 16px;
+    
+}
+.cover{
+    background-attachment: fixed;
+    padding: 0 0;
+    width: 100%;
+    position: relative;
+}
+.navbar{
+    padding: 22px 0px;
+    margin-bottom: 0px;
+}
+.navbar-brand{
+    transition: all 0.5s ease-in;
+}
+.navbar-brand:hover{
+    color: #f87832 !important;
+}
+.navbar ul li a{
+    color: white !important;
+    letter-spacing: 1px;
+    font-size: 14px;
+    transition: all 0.5s ease-in;
+}
+.navbar ul li a:hover{
+    color: #f87832 !important;
+}
+
+ #video{
          position: absolute;
           top: 50%; 
           left: 50%;
@@ -37,111 +50,188 @@
           height: auto;
           z-index: -1000; 
           overflow: hidden;
-        }
-      #i2i{
-        margin-top: 365px;
-        background-color:#f87832;
-        height: 200px;
-      }
-      #overview{
-        background-color:#fff;
-        height: 650px;
-        }
-      .fa{
-        font-size: 100px;
-      }
-      #services{
-        margin-top: 100px;
-        background-color: #dfe6e9;
-        background-attachment: fixed;
-        height: 750px;
-        background-image:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../images/sky.jpg");
-      }
-      #wip{
-        background-color: #fff;
-        height: 500px;
-      }
-      .blockchain-img{
-        border-radius: 30px;
-        margin-top: 50px; 
-      }
-      #partner{
-        margin-top: 100px;
-        background-color: #dfe6e9;
-        height: 600px;
-        background-size:cover;
-        background-attachment:fixed;
-        background-image:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("https://fullhdpictures.com/wp-content/uploads/2016/12/Business-Partners-Wallpapers.jpg");
-      }
-      footer{
-        background-color: #f87832;
-        height: 100px;
-      }
-    #myBtn {
-      display: none; /* Hidden by default */
-      position: fixed; /* Fixed/sticky position */
-      bottom: 20px; /* Place the button at the bottom of the page */
-      right: 30px; /* Place the button 30px from the right */
-      z-index: 99; /* Make sure it does not overlap */
-      border: none; /* Remove borders */
-      outline: none; /* Remove outline */
-      color: white; /* Text color */
-      cursor: pointer; /* Add a mouse pointer on hover */
-      padding: 15px; /* Some padding */
-      border-radius: 10px; /* Rounded corners */
-      font-size: 9px; /* Increase font size */
-    }
+}
+#i2i{
+    background-color:#f87832 ;
+    color: #fff !important;
+    padding: 10px 10px;
+    margin: 20 20;
+}
+.i2idisplay{
+    font-weight: 300;
+    line-height: 1.2;
+}
+.overview{
+    padding: 3rem!important;
+}
+#overview{
+    background-color: #b2bec3;
+    border-radius: 1rem!important;
+    padding: 20px;
+    box-shadow: 0 1rem 4rem rgba(0,0,0,.200)!important;
+    box-sizing: border-box;
+}
+.blockchain{
+    height: 400px;
+    width: 400px;
+}
+.service-area{
+    margin-top: 30px;
+}
+.service-area p{
+   margin-bottom: -5px;
+}
+.service-wrap {
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    padding: 25px 35px;
+    position: relative;
+    transition: all 0.5s ease 0s;
+    z-index: 9;
+    margin-top: 20px;
     
-    #myBtn:hover {
-      background-color: #555; /* Add a dark-grey background on hover */
-    }
+}
+.service-wrap::before, .service-wrap::after {
+    content: "";
+    height: 300%;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 120%;
+    z-index: -9;
+    transition: all 0.5s;
+    opacity: 0;
+    background:#f87832;    
     
-    /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-  background-color: transparent;
-  border: none;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+.service-wrap::before{
+    top: -37px;
+    left: 100%;  
+    
+}
+.service-wrap:hover:before{    
+    left: -27px;
+    opacity: 1;
+    
+}
+.service-wrap::after{
+     right: 100%;
+     bottom: -37px;
+    
+}
+.service-wrap:hover:after{
+     right: -27px;
+     opacity: 1;
+    
+}
+.service-wrap:hover{
+     color: white;    
+}
+.service-wrap:h3{
+     color: white;    
+}
+.service-wrap:hover h3{
+     color: white;    
+}
+.service-wrap:hover h3:after{
+     background-color: white;    
 }
 
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+.service-icon i{
+    font-size: 30px;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+    
+}
+.service-wrap:hover .service-icon i{
+    transform:rotate(360deg);
+}
+.service-wrap h3{
+    font-size: 25px;
+    font-weight: 700;
+    padding-bottom: 15px;
+    position: relative;
+    
+}
+.service-wrap p{
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.stat{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),url(../img/sky.jpg);
+    background-attachment: fixed;
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    color: #fff;
+    font-size: 18px;
+    margin-top: 50px;
+    
+}
+.stat-items h2{
+    font-weight: bold;
+    font-size: 30px;
+    color: #f87832;
+}
+.stat p{
+    letter-spacing: 1;
+}
+.partners{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),url(../img/partners.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 125px;
+    padding-bottom: 125px;
+    color: #fff;
+    margin-top: 100px;
+}
+.part{
+    margin-top: 20px;
+}
+.part{
+    margin: 0 15px;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+.contact-infos{
+    float: left;
+    width: 100%;
+    background:#f87832;
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
-
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
+.contact-infos .fa{
+    color: #fff;
+    font-size: 26px;
+    border:1px solid white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px; 
+    transition: all 0.5s ease-in;
 }
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: #b2bec3;
-  color: black;
+.contact-infos .fa:hover{
+    color:#b2bec3;
 }
-
-/* Style the back side */
-.flip-card-back {
-  background-color: #b2bec3;
-  color: white;
-  transform: rotateY(180deg);
+.contact-infos p{
+    color:#fff;
+    margin-top: 20px;
 }
-
-.flipcolor{
-    font-family: 'Montserrat', sans-serif;
-    margin-top:50px;
-    font-size:22px;
-    color:#f87832;
+#contact{
+    background:#000;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.location{
+    
+    padding: 15px;
+}
+hr{
+   border-bottom: 3px solid black;
+   width: 40px;
+}
+.map{
+ border-radius: 30px;   
+}
+.menu{
+    color: white;
+    
 }
